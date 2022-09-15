@@ -2,7 +2,7 @@
   <arg name="serial_nr" />
   <arg name="calib_file" default="$(find rpg_calib)/ncamera/bluefox_$(arg serial_nr)_pinhole.yaml"/>
 
-  <node pkg="nodelet" type="nodelet" name="vo_nodelet_manager"  args="manager" output="screen"/>
+  <node pkg="nodelet" type="nodelet" name="vo_nodelet_manager" args="manager" output="screen"/>
 
   <!-- Camera driver -->
   <node pkg="nodelet" type="nodelet" name="camera" args="load bluefox_ros/BluefoxCameraNodelet vo_nodelet_manager" output="screen">

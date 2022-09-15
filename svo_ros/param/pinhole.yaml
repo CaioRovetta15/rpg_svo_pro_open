@@ -29,7 +29,7 @@ T_world_imuinit/qz: 0
 T_world_imuinit/qw: 1
 
 # Keyframe selection
-kfselect_criterion: FORWARD    # alterntive: DOWNLOOKING
+kfselect_criterion: FORWARD # alterntive: DOWNLOOKING
 # The following kfselect_* ONLY affects FORWARD
 # If the number of features: >upper, no keyframe; <lower, take keyframe
 kfselect_numkfs_upper_thresh: 120
@@ -46,7 +46,7 @@ kfselect_min_disparity: 40
 # When taking a new keyframe,
 # we can already update the newly initialized seeds with old keyframes.
 # This is important for forward looking case.
-update_seeds_with_old_keyframes: True  
+update_seeds_with_old_keyframes: True
 
 # Default affine compensation parameters
 # Most of the parameters are set to false for the consideration of processing time.
@@ -93,20 +93,3 @@ seed_convergence_sigma2_thresh: 200
 # IMU
 # Normally the prior should be 0 if not using IMU.
 use_imu: False
-poseoptim_prior_lambda: 0.0 # Gyroscope prior in pose optimization
-img_align_prior_lambda_rot: 0.0 # Gyroscope prior in sparse image alignment
-img_align_prior_lambda_trans: 0.0 # Constant velocity assumption prior in sparse image alignment
-
-# Dense input
-publish_every_nth_dense_input: 5
-
-# Visualization
-publish_marker_scale: 0.5
-
-# Stereo parameters, not used for mono.
-max_depth_inv: 0.05
-min_depth_inv: 1.0
-mean_depth_inv: 0.3
-
-# Disable ceres backend
-use_ceres_backend: false

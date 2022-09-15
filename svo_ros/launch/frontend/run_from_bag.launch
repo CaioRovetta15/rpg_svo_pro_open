@@ -14,7 +14,7 @@
     <!--Parameters-->
     <rosparam file="$(find svo_ros)/param/pinhole.yaml" />
     <param name="map_scale" value="1" />
-    
+
     <!-- Loop closure detection parameters -->
     <param name="runlc" value="false" />
     <!--<rosparam file="$(find svo_ros)/param/loop_closing.yaml" />-->
